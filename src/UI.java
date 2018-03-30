@@ -18,19 +18,15 @@ public class UI implements  ActionListener{
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        //new Test();
         UI log1=new UI();
-        log1.InitUI();
-        
-
+        log1.InitUI();        
     }
     
     public void InitUI()
     {
     	final String a[] = {"573","71","59888","1386","61065","185","136","500544","103","7778","202","4360356","75285","749","1201","219","4383","10386","1349","18"};//,71,59888,1386,61065,185,136,500544,103,7778,202,4360356,75285,749,1201,219,4383,10386,1349,18}; 
     	final String a1[] = new String [20]; //声明并定义大小（即分配了指定大小的空间）
-    	//final int sumGrade=(Integer) null;
-    //1.1创建一个顶级容器，也就是空白窗口，并为此窗口设置属性（窗口名称，大小，显示位置，关闭设置）
+    //创建一个顶级容器，也就是空白窗口，并为此窗口设置属性（窗口名称，大小，显示位置，关闭设置）
     // 用JFrame创建一个名为frame的顶级容器
     JFrame frame=new JFrame();
     frame.setTitle("Four-arithmetic-operation");
@@ -280,10 +276,7 @@ public class UI implements  ActionListener{
             a1[17]=ans18.getText();
             a1[18]=ans19.getText();
             a1[19]=ans20.getText();
-           /*for(int i=0;i<=20;i++){
-            System.out.println(a1[i]);
-           }*/
-            //String sum=null;
+        
             int sum=0;
             for(int i=0;i<20;i++){
             if(a[i].equals(a1[i])){
@@ -298,20 +291,35 @@ public class UI implements  ActionListener{
         }
     });//end of queding
 
-
+    //one more time
     onemore.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             // 进行逻辑处理即可
             System.out.println("触发了事件");
-            //this.dispose();
-            //System.exit(0);
-           
-            //InitUI frame=new InitUI();
             UI log2=new UI();
             log2.InitUI();
             
         }
     });
+    
+    bu3.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+            System.out.println("触发了事件");
+            
+           /* try {  
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());  
+            } catch (Exception e1) {  
+                e1.printStackTrace();  
+            }  */
+       
+            Diagram dg = new Diagram();    
+            dg.setVisible(true); 
+             
+             
+            
+        }
+    });
+    
     
     bu4.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
@@ -327,7 +335,8 @@ public class UI implements  ActionListener{
             Timers frame = new Timers("计时器");  
             frame.pack();  
              frame.setVisible(true); 
-            
+             
+             
             
         }
     });
