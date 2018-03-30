@@ -255,7 +255,6 @@ public class UI implements  ActionListener{
     queding.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             // 进行逻辑处理即可
-            //System.out.println("触发了事件");
             a1[0]=ans1.getText();
             a1[1]=ans2.getText();
             a1[2]=ans3.getText();
@@ -302,25 +301,16 @@ public class UI implements  ActionListener{
         }
     });
     
+    //输出柱状图
     bu3.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             System.out.println("触发了事件");
-            
-           /* try {  
-                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());  
-            } catch (Exception e1) {  
-                e1.printStackTrace();  
-            }  */
-       
             Diagram dg = new Diagram();    
-            dg.setVisible(true); 
-             
-             
-            
+            dg.setVisible(true);  
         }
     });
     
-    
+    //计时器
     bu4.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             // 进行逻辑处理即可
