@@ -16,12 +16,7 @@ import javax.swing.UIManager;
 
 public class UI implements  ActionListener{
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        UI log1=new UI();
-        log1.InitUI();        
-    }
-    
+
     public void InitUI()
     {
     	final String a[] = {"573","71","59888","1386","61065","185","136","500544","103","7778","202","4360356","75285","749","1201","219","4383","10386","1349","18"};//,71,59888,1386,61065,185,136,500544,103,7778,202,4360356,75285,749,1201,219,4383,10386,1349,18}; 
@@ -32,7 +27,7 @@ public class UI implements  ActionListener{
     frame.setTitle("Four-arithmetic-operation");
     frame.setSize(300,600);
     frame.setLocationRelativeTo(null);
-    frame.setDefaultCloseOperation(3);
+    //frame.setDefaultCloseOperation(3);
 
     
     GridLayout f1=new GridLayout(25,2);
@@ -238,7 +233,7 @@ public class UI implements  ActionListener{
     final JLabel grade=new JLabel("本轮分数为：");
     frame.add(grade);
     
-    final JTextField grade1=new JTextField(5);
+    final JLabel grade1=new JLabel();
     frame.add(grade1);
     
     JButton bu3=new JButton("输出柱状图");
@@ -256,6 +251,9 @@ public class UI implements  ActionListener{
         public void actionPerformed(ActionEvent e) {
             // 进行逻辑处理即可
             a1[0]=ans1.getText();
+            /*for(int i= 0;i<20;i++){
+            	a1[i]=ans.getText();
+            }*/
             a1[1]=ans2.getText();
             a1[2]=ans3.getText();
             a1[3]=ans4.getText();
@@ -294,7 +292,7 @@ public class UI implements  ActionListener{
     onemore.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             // 进行逻辑处理即可
-            System.out.println("触发了事件");
+            //System.out.println("触发了事件");
             UI log2=new UI();
             log2.InitUI();
             
@@ -304,7 +302,7 @@ public class UI implements  ActionListener{
     //输出柱状图
     bu3.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-            System.out.println("触发了事件");
+           // System.out.println("触发了事件");
             Diagram dg = new Diagram();    
             dg.setVisible(true);  
         }
@@ -314,17 +312,15 @@ public class UI implements  ActionListener{
     bu4.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             // 进行逻辑处理即可
-            System.out.println("触发了事件");
-            //this.dispose();
-            try {  
-                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());  
-            } catch (Exception e1) {  
-                e1.printStackTrace();  
-            }  
-       
-            Timers frame = new Timers("计时器");  
-            frame.pack();  
-             frame.setVisible(true); 
+//            try {  
+//                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());  
+//            } catch (Exception e1) {  
+//                e1.printStackTrace();  
+//            }  
+//       
+            Timers fr = new Timers("计时器");  
+            fr.pack();  
+            fr.setVisible(true); 
              
              
             
